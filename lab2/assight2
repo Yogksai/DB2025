@@ -1,0 +1,34 @@
+create tablespace digital_contentable 
+location '/Users/kadera/storage/ebooks';
+
+CREATE TABLE book_catalog (
+    catalog_id SERIAL PRIMARY key, 
+    isbn VARCHAR(13) ,
+    book_title VARCHAR(150) ,
+    author_name VARCHAR(100) ,
+    publisher CHAR(80),
+    publication_year SMALLINT,
+    total_pages INT,
+    book_format VARCHAR(10),
+    purchase_price DECIMAL(2),
+    is_available BOOLEAN
+);
+
+create table downlaod_id (
+	download_id SERIAL PRIMARY key,
+	user_id INT,
+	catalog_id INT,
+	download_timestamp TIMESTAMP,
+	file_format VARCHAR(10),
+	file_size_mb REAL,
+	download_completed BOOLEAN,
+	expiry_date DATE,
+	access_count SMALLINT
+);
+
+alter table book_catalog
+add column genre VARCHAR(50),
+add column library_section CHAR(3),
+alter column genre set default 'UNKNOWN';
+
+

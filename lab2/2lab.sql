@@ -279,6 +279,6 @@ DROP DATABASE IF EXISTS university_test;
 DROP DATABASE IF EXISTS university_distributed;
 
 -- Create backup database using university_main as template
-CREATE DATABASE university_backup
+CREATE DATABASE universitxwy_backup
 WITH TEMPLATE university_main
 OWNER kadera;
