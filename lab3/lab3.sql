@@ -45,7 +45,7 @@ VALUES (1, 'Yerassyl', 'Kadyrzhan', 'KBTU');
 
 -- 3. 
 INSERT INTO employees (first_name, last_name, hire_date)
-VALUES ('Yerassyl', 'Kadyrzhan', CURRENT_DATE);
+VALUES ('Yerassy', 'Kadyrzhan', CURRENT_DATE);
 
 -- 4. 
 INSERT INTO departments (dept_name, budget, manager_id)
